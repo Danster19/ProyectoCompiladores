@@ -14,7 +14,7 @@
         public void Escanear(string texto)
         {
             string palabra = "";
-            var path = @"C:\Users\yanil\Universidad\Semestre 7\Compiladores\Proyecto\Proyecto\Proyecto\Archivos\Errores.txt";
+            var path = @"Archivos\Errores.txt";
             var sw = new StreamWriter(path);
             // Contadores para identificar la fila y columna actual
             int columna = 1;
@@ -70,7 +70,7 @@
         {
             simbolosPermitidos.Add(' ');
             simbolosPermitidos.Add('\n');
-            string path = @"C:\Users\yanil\Universidad\Semestre 7\Compiladores\Proyecto\Proyecto\Proyecto\Archivos\TablaDeSimbolos.txt";
+            string path = @"Archivos\TablaDeSimbolos.txt";
             string text = File.ReadAllText(path);
             string[] filas = text.Split('\n');
             foreach (var fila in filas)
