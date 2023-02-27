@@ -73,15 +73,22 @@
             simbolosPermitidos.Add('\t');
             simbolosPermitidos.Add('\r');
             string path = @"Archivos\TablaDeSimbolos.txt";
-            string text = File.ReadAllText(path);
-            string[] filas = text.Split('\n');
-            foreach (var fila in filas)
+            try
             {
-                string[] caracteres = fila.Split(' ');
-                foreach (var c in caracteres)
+                string text = File.ReadAllText(path);
+                string[] filas = text.Split('\n');
+                foreach (var fila in filas)
                 {
-                    simbolosPermitidos.Add(c[0]);
+                    string[] caracteres = fila.Split(' ');
+                    foreach (var c in caracteres)
+                    {
+                        simbolosPermitidos.Add(c[0]);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error al abrir el archivo de símbolos permitidos: {e.Message}");
             }
         }
     }
