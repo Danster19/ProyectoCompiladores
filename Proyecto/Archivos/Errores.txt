@@ -1,3 +1,2 @@
-Simbolo no permitido: 'C', fila: 2, columna: 1
-Simbolo no permitido: 'D', fila: 3, columna: 1
-Simbolo no permitido: 'ñ', fila: 4, columna: 1
+Simbolo no permitido: '#', fila: 2, columna: 5
+Simbolo no permitido: 'ñ', fila: 2, columna: 6

@@ -18,5 +18,8 @@ namespace Proyecto
             string txtError = File.ReadAllText(sigue);//lee los erores de la tabla de simbolos
             textoSecundario.Text = txtError;
         }
+        private void button2_Click(object sender, EventArgs e){
+            Close();
+        }
     }
 }
