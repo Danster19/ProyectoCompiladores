@@ -3,7 +3,7 @@
     public class AnalizadorLexico
     {
         private List<char> simbolosPermitidos;
-        private List<string> palabrasReservadas;
+        public List<string> palabrasReservadas;
         List<string> palabras;
 
         public AnalizadorLexico()

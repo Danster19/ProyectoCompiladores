@@ -8,11 +8,13 @@ namespace Proyecto
     {
         
         AnalizadorLexico analizador;
+        List<string> palabrasReservadas;
         public Form1()
         {
             InitializeComponent();
             LimpiarErrores();
             analizador = new AnalizadorLexico();
+            palabrasReservadas = analizador.palabrasReservadas;
         }
 //aqui agregaremos la funcion para que las palabras reserbadas tengan 
 //un color propio.
@@ -59,6 +61,32 @@ namespace Proyecto
                 File.WriteAllText(path, String.Empty);
             }catch(Exception e){
                 MessageBox.Show($"Error al inicializar el archivo de errores: {e.Message}");
+            }
+        }
+
+        /* Sin RegEx
+         *
+         */
+        private void ColorearPalabrasReservadas(){
+            string palabra = String.Empty;
+            int index;
+            for (int i = 0; i < textoPrincipal.Text.Length; i++)
+            {
+                var caracter = textoPrincipal.Text[i];
+                if (!caracter.Equals(' ') && !caracter.Equals('\n') && !caracter.Equals('\t'))
+                {
+                    palabra += caracter;
+                }
+                else
+                {
+                    if (palabrasReservadas.Contains(palabra))
+                    {
+                        index = textoPrincipal.Text.IndexOf(palabra);
+                        textoPrincipal.Select(index, palabra.Length);
+                        textoPrincipal.SelectionColor = Color.AliceBlue;
+                    }
+                    palabra = "";
+                }
             }
         }
     }
