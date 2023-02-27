@@ -70,6 +70,8 @@
         {
             simbolosPermitidos.Add(' ');
             simbolosPermitidos.Add('\n');
+            simbolosPermitidos.Add('\t');
+            simbolosPermitidos.Add('\r');
             string path = @"Archivos\TablaDeSimbolos.txt";
             string text = File.ReadAllText(path);
             string[] filas = text.Split('\n');
