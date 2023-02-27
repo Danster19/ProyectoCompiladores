@@ -34,23 +34,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textoPrincipal instroduccion de valores
+            // textoPrincipal
             // 
             this.textoPrincipal.Location = new System.Drawing.Point(50, 50);
             this.textoPrincipal.Name = "textoPrincipal";
             this.textoPrincipal.Size = new System.Drawing.Size(450, 300);
             this.textoPrincipal.TabIndex = 0;
             this.textoPrincipal.Text = "";
-            //
-            //texto Secundario visualizacion de errores
-            //
+            this.textoPrincipal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textoPrincipal_KeyDown);
+            // 
+            // textoSecundario
+            // 
             this.textoSecundario.Location = new System.Drawing.Point(540, 50);
             this.textoSecundario.Name = "textoSecundario";
             this.textoSecundario.Size = new System.Drawing.Size(450, 300);
             this.textoSecundario.TabIndex = 0;
             this.textoSecundario.Text = "";
             // 
-            // button1 Generar analisis
+            // generarButton
             // 
             this.generarButton.Location = new System.Drawing.Point(1000, 50);
             this.generarButton.Name = "generarButton";
@@ -60,16 +61,16 @@
             this.generarButton.UseVisualStyleBackColor = true;
             this.generarButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            //button2 Salida
-            //modificado por Daniel C
+            // button2
+            // 
             this.button2.Location = new System.Drawing.Point(1000, 100);
-            this.button2.Name = "BtnSalir";
+            this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            //
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
