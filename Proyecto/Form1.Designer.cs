@@ -41,7 +41,6 @@
             this.textoPrincipal.Size = new System.Drawing.Size(450, 300);
             this.textoPrincipal.TabIndex = 0;
             this.textoPrincipal.Text = "";
-            this.textoPrincipal.TextChanged += new System.EventHandler(this.textoPrincipal_TextChanged);
             this.textoPrincipal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textoPrincipal_KeyDown);
             // 
             // textoSecundario
