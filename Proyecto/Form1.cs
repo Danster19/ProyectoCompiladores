@@ -101,9 +101,16 @@ namespace Proyecto
             //ColorearPalabrasReservadas();
         }
 
+<<<<<<< HEAD
         // private void textoPrincipal_TextChanged(object sender, KeyEventArgs e)
         // {
         //     ColorearPalabrasReservadas();
         // }        
+=======
+        private void textoPrincipal_TextChanged(object sender, EventArgs e)
+        {
+            ColorearPalabrasReservadas();
+        }
+>>>>>>> ae46d552f35e60ef4069e158546add295fd891e8
     }
 }
