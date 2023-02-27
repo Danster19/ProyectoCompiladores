@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textoPrincipal
+            // textoPrincipal instroduccion de valores
             // 
             this.textoPrincipal.Location = new System.Drawing.Point(100, 50);
             this.textoPrincipal.Name = "textoPrincipal";
@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textoPrincipal);
             this.Controls.Add(this.textoSecundario);
