@@ -11,6 +11,8 @@
             palabras = new List<string>();
             simbolosPermitidos = new List<char>();
             palabrasReservadas = new List<string>();
+            GetSimbolosPermitidos();
+            GetPalabrasReservadas();
         }
 
         public void Escanear(string texto)
@@ -68,7 +70,7 @@
             }
         }
 
-        public void GetSimbolosPermitidos()
+        private void GetSimbolosPermitidos()
         {
             simbolosPermitidos.Add(' ');
             simbolosPermitidos.Add('\n');
