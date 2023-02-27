@@ -2,13 +2,15 @@
 {
     public class AnalizadorLexico
     {
-        List<char> simbolosPermitidos;
+        private List<char> simbolosPermitidos;
+        private List<string> palabrasReservadas;
         List<string> palabras;
 
         public AnalizadorLexico()
         {
             palabras = new List<string>();
             simbolosPermitidos = new List<char>();
+            palabrasReservadas = new List<string>();
         }
 
         public void Escanear(string texto)
@@ -89,6 +91,25 @@
             catch (Exception e)
             {
                 MessageBox.Show($"Error al abrir el archivo de símbolos permitidos: {e.Message}");
+            }
+        }
+
+        private void GetPalabrasReservadas()
+        {
+            try
+            {
+                string path = @"Archivos\PalabrasReservadas.txt";
+                string text = File.ReadAllText(path);
+                string[] filas = text.Split('\n');
+                foreach (var fila in filas)
+                {
+                    palabrasReservadas.Add(fila);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error al abrir el archivo de palabras reservadas: {e.Message}");
+                throw;
             }
         }
     }
