@@ -100,5 +100,10 @@ namespace Proyecto
         {
             ColorearPalabrasReservadas();
         }
+
+        private void textoPrincipal_TextChanged(object sender, EventArgs e)
+        {
+            ColorearPalabrasReservadas();
+        }
     }
 }
