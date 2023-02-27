@@ -1,2 +1,0 @@
-Simbolo no permitido: 'Q', fila: 1, columna: 8
-Simbolo no permitido: '"', fila: 1, columna: 9

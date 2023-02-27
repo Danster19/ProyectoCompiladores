@@ -30,7 +30,7 @@
         {
             this.textoPrincipal = new System.Windows.Forms.RichTextBox();
             this.textoSecundario = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.generarButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,13 +52,13 @@
             // 
             // button1 Generar analisis
             // 
-            this.button1.Location = new System.Drawing.Point(1000, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.generarButton.Location = new System.Drawing.Point(1000, 50);
+            this.generarButton.Name = "generarButton";
+            this.generarButton.Size = new System.Drawing.Size(112, 34);
+            this.generarButton.TabIndex = 1;
+            this.generarButton.Text = "Generar";
+            this.generarButton.UseVisualStyleBackColor = true;
+            this.generarButton.Click += new System.EventHandler(this.button1_Click);
             // 
             //button2 Salida
             //modificado por Daniel C
@@ -75,7 +75,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.generarButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textoPrincipal);
             this.Controls.Add(this.textoSecundario);
@@ -89,7 +89,7 @@
 
         private RichTextBox textoPrincipal;
         private RichTextBox textoSecundario;
-        private Button button1;
+        private Button generarButton;
         private Button button2;
 
     }

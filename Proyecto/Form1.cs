@@ -11,8 +11,8 @@ namespace Proyecto
         public Form1()
         {
             InitializeComponent();
+            LimpiarErrores();
             analizador = new AnalizadorLexico();
-
         }
 //aqui agregaremos la funcion para que las palabras reserbadas tengan 
 //un color propio.
@@ -45,8 +45,21 @@ namespace Proyecto
             string txtError = File.ReadAllText(sigue);//lee los erores de la tabla de simbolos
             textoSecundario.Text = txtError;
         }
+
         private void button2_Click(object sender, EventArgs e){
             Close();
+        }
+
+        /* Cada vez que se abra el programa los errores que habian quedado se eliminarán.
+         * Esta función se llama cuando se inicializa el form.
+         */
+        private void LimpiarErrores(){
+            try{
+                string path =@"Archivos\Errores.txt";
+                File.WriteAllText(path, String.Empty);
+            }catch(Exception e){
+                MessageBox.Show($"Error al inicializar el archivo de errores: {e.Message}");
+            }
         }
     }
 }
