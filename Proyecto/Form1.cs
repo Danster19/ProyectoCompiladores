@@ -98,7 +98,12 @@ namespace Proyecto
 
         private void textoPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            ColorearPalabrasReservadas();
+            //ColorearPalabrasReservadas();
         }
+
+        // private void textoPrincipal_TextChanged(object sender, KeyEventArgs e)
+        // {
+        //     ColorearPalabrasReservadas();
+        // }        
     }
 }
