@@ -1,5 +1,7 @@
 namespace Proyecto
+
 {
+
     internal static class Program
     {
         /// <summary>

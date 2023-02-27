@@ -15,6 +15,7 @@
             GetPalabrasReservadas();
         }
 
+
         public void Escanear(string texto)
         {
             string palabra = "";
@@ -64,12 +65,12 @@
                 }
             }
             sw.Close();
-            foreach (string p in palabras)
+           /* foreach (string p in palabras)
             {
                 MessageBox.Show($"Palabra: '{p}'");
-            }
+            }*/
         }
-
+        
         private void GetSimbolosPermitidos()
         {
             simbolosPermitidos.Add(' ');

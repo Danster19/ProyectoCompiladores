@@ -1,13 +1,40 @@
+
+using System.Text.RegularExpressions; //para poder utilizar funciones de color
+
 namespace Proyecto
+
 {
     public partial class Form1 : Form
     {
+        
         AnalizadorLexico analizador;
         public Form1()
         {
             InitializeComponent();
             analizador = new AnalizadorLexico();
+
         }
+//aqui agregaremos la funcion para que las palabras reserbadas tengan 
+//un color propio.
+        /*public void Color_Palabra(){
+            String val = "";
+            String[] Frace ={"entero","si"};
+            foreach (var item in Frace)
+            {
+                val += item + "|";
+            }
+
+            Regex N = new Regex(val);
+            int Index = textoPrincipal.SelectionStart;
+
+            foreach (Match item2 in N.Matches(textoPrincipal.Text))
+            {
+                textoPrincipal.Select(item2.Index,item2.Value.Length);
+                textoPrincipal.SelectionColor=Color.Blue;
+                textoPrincipal.SelectionStart = Index;
+            }
+            textoPrincipal.SelectionColor = Color.Black;
+        }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
